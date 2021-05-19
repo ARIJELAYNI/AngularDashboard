@@ -8,9 +8,11 @@ import { DashboardService } from '../dashboard.service';
 })
 export class DashboardComponent implements OnInit {
 
+  bigChart = [];
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.bigChart = this.dashboardService.bigChart();
   }
 
 }
