@@ -14,7 +14,10 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleSideBar() {
-    this.toggleSideBarForMe.emit()
+    this.toggleSideBarForMe.emit();
+    setTimeout(() =>{
+      window.dispatchEvent(new Event('resize'))
+    },1000)
   }
 
 }
