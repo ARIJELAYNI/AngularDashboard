@@ -32,7 +32,7 @@ export class AreaComponent implements OnInit {
         enabled: false
       },
       exporting: {
-        enabled: false
+        enabled: true
       },
       plotOptions: {
           area: {
@@ -45,9 +45,7 @@ export class AreaComponent implements OnInit {
               }
           }
       },
-      series: [{
-       data: [71, 78, 30, 66]
-      }]
+      series: this.data
     };
 
     HC_exporting(Highcharts);
