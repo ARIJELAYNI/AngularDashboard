@@ -9,6 +9,7 @@ import HC_exporting from 'highcharts/modules/exporting';
 
 export class AreaComponent implements OnInit {
   @Input() data;
+  
   Highcharts = Highcharts;
   chartOptions: {};
   constructor() { }
