@@ -13,7 +13,6 @@ import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { TableComponent } from './widgets/table/table.component'
@@ -37,7 +36,6 @@ import { TableComponent } from './widgets/table/table.component'
     MatMenuModule,
     MatCardModule,
     MatTableModule,
-    MatPaginator,
     MatListModule,
     FlexLayoutModule,
     HighchartsChartModule
