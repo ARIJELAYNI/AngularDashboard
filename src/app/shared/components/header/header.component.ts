@@ -1,5 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import firebase from 'firebase/app';
 
+import 'firebase/auth';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,7 +11,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-  constructor() { }
+  constructor(private afAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
   }
@@ -20,4 +23,10 @@ export class HeaderComponent implements OnInit {
     },1000)
   }
 
+  login(){
+    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+  logout(){
+    this.afAuth.signOut();
+  }
 }

@@ -16,6 +16,9 @@ import { MatTableModule } from '@angular/material/table';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { TableComponent } from './widgets/table/table.component'
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -38,7 +41,9 @@ import { TableComponent } from './widgets/table/table.component'
     MatTableModule,
     MatListModule,
     FlexLayoutModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   exports: [
     HeaderComponent,

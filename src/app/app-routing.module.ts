@@ -4,9 +4,11 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { RouterModule } from '@angular/router';
 import { PostsComponent } from './modules/posts/posts.component';
+import { AppComponent } from './app.component';
 
 const routes = [
-  { path:'',
+  { path:'login', component: AppComponent },
+  { path:'dashboard',
     component: DefaultComponent,
     children: [
       {  path:'',
