@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
     this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
   logout(){
+    console.log('sign out')
     this.afAuth.signOut();
   }
 }
